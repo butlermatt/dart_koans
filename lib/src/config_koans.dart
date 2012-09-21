@@ -6,6 +6,10 @@
 class ConfigKoans extends Configuration {
   String get name => 'Koans';
   
+  void onStart() {
+    print('Beginning the path to enlightenment...');
+  }
+  
   void onDone(int passed, int failed, int errors, List<TestCase> results,
               String uncaughtError) {
     var total = passed + failed + errors;
@@ -21,7 +25,7 @@ class ConfigKoans extends Configuration {
       }
       
 //      print('Trace: ${fail.stackTrace}');
-      print('Failed at: ${fail.currentGroup} ${fail.description}');
+      print('Failed at: ${fail.description}');
       print(fail.message);
     }
     
