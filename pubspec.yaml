@@ -1,0 +1,5 @@
+name: dart_koans
+version: 0.0.1
+dependencies: 
+  unittest:
+    sdk: unittest
