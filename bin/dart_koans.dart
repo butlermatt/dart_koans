@@ -14,12 +14,7 @@ void main() {
   configure(unitConf);
   
   print('Welcome to Dart Koans.');
-  print('This package is inspired by Ruby Koans.');
+  print('This package is inspired by Ruby Koans.\n');
   
-  try {
-    start_here();
-  } on Exception catch (e) {
-    print('Caught an error..');
-    //print(e.message);
-  }
+  start_here();
 }

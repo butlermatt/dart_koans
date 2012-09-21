@@ -8,9 +8,8 @@ class ConfigKoans extends Configuration {
   
   void onDone(int passed, int failed, int errors, List<TestCase> results,
               String uncaughtError) {
-    print('Passed: $passed');
-    print('Failed: $failed');
-    print('Errors: $errors');
+    var total = passed + failed + errors;
+    print('Process: $passed tests have been passed. ${total - passed} remain.');
     
     if(failed > 0) {
       var fail;
@@ -20,9 +19,10 @@ class ConfigKoans extends Configuration {
           break;
         }
       }
+      
+//      print('Trace: ${fail.stackTrace}');
       print('Failed at: ${fail.currentGroup} ${fail.description}');
       print(fail.message);
-      print('Trace: ${fail.stackTrace}');
     }
     
     
