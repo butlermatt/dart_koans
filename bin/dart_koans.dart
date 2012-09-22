@@ -3,7 +3,7 @@
 
 #import('package:unittest/unittest.dart');
 #import('package:dart_koans/src/config_koans.dart');
-#import('package:dart_koans/src/colors.dart', prefix: 'colors');
+#import('package:dart_koans/src/config_colors.dart', prefix: 'colors');
 
 #source('package:dart_koans/src/koans_variables.dart');
 

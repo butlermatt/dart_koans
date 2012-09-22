@@ -23,8 +23,30 @@ start_here() {
     });
   });
   group('Variables -', () {
-    group('Optional Types', () {
-      
+    group('Optional Types -', () {
+      test('var', () {
+        /*
+         * Dart uses an optional type system. This means that when
+         * declaring variables, you may declare them as 'var' (short
+         * for variable) or as a specific type.
+         */
+        var variable = 5;
+        expect(_____, equals(5));
+      });
+      test('num - whole numbers', () {
+        /*
+         * The num type holds numbers including whole numbers
+         */
+        num number = 5;
+        expect(_____, isNum);
+      });
+      test('num - decimal numbers', () {
+        /*
+         * The num type can also hold decimal numbers
+         */
+        num number = 5.3;
+        expect(_____, isNum);
+      });
     });
   });
 }
