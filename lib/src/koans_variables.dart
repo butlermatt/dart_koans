@@ -23,18 +23,10 @@ start_here() {
     });
   });
   group('Variables -', () {
-    group('Optional Types -', () {
-      test('var', () {
-        /*
-         * Dart uses an optional type system. This means that when
-         * declaring variables, you may declare them as 'var' (short
-         * for variable) or as a specific type.
-         */
-        var variable = 5;
-        expect(_____, equals(5));
-      });
+    group('Numbers -', () {
       test('num - whole numbers', () {
         /*
+         * Dart provides optional types to define variables. 
          * The num type holds numbers including whole numbers
          */
         num number = 5;
@@ -46,6 +38,48 @@ start_here() {
          */
         num number = 5.3;
         expect(_____, isNum);
+      });
+      test('var', () {
+        /*
+         * The optional type system means that when declaring 
+         * variables, you may declare them as 'var' (short
+         * for variable) or as a specific type.
+         */
+        var variable = 5;
+        expect(_____, isNum);
+      });
+    });
+    group('Integers -', () {
+      test('int', () {
+        /*
+         * Dart also has more specific types of numbers. In
+         * particular dart as int (Integers) available for
+         * whole numbers.
+         */
+        int integer = 5;
+        expect(_____, isInt);
+      });
+      test('num', () {
+        /*
+         * The int type is a subclass of the num type.
+         */
+        int integer = 5;
+        expect(_____, isNum);
+      });
+      test('var', () {
+        /*
+         * Dart can automagically infer types even if they
+         * were not declared.
+         */
+        var variable = 5;
+        expect(_____, isInt);
+      });
+      test('not decimal', () {
+        /*
+         * Note that decimal numbers are not Integers (int)
+         */
+        var decimal = 5.3;
+        expect(_____, isNotInt);
       });
     });
   });

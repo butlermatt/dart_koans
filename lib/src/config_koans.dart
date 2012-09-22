@@ -4,17 +4,40 @@
 #import('config_colors.dart', prefix: 'colors');
 #import('dart:io');
 
-/// A [Matcher] that matches any [num] value
-Matcher isNum = new isInstanceOf<num>('num');
+/// A [Matcher] that matches any [num] instance
+const Matcher isNum = const isInstanceOf<num>('num');
 
-/// A [Matcher] that maches any [int] value
-Matcher isInt = new isInstanceOf<int>('int');
+/// A [Matcher] that matches any [int] instance
+const Matcher isInt = const isInstanceOf<int>('int');
 
-/// A [Matcher] that maches any [double] value
-Matcher isDouble = new isInstanceOf<double>('double');
+/// A [Matcher] that matches any [double] instance
+const Matcher isDouble = const isInstanceOf<double>('double');
 
-/// A [Matcher] that maches any [String] value
-Matcher isString =  new isInstanceOf<String>('String');
+/// A [Matcher] that matches any [String] instance
+const Matcher isString =  const isInstanceOf<String>('String');
+
+/// A [Matcher] that matches any non [num] instance
+const Matcher isNotNum = const isNotInstanceOf<num>('num');
+
+/// A [Matcher] that matches any non [int] instance
+const Matcher isNotInt = const isNotInstanceOf<int>('int');
+
+/// A [Matcher] that matches any non [double] instance
+const Matcher isNotDouble = const isNotInstanceOf<double>('double');
+
+/// A [Matcher] that matches any non [num] instance
+const Matcher isNotString = const isNotInstanceOf<String>('String');
+
+
+class isNotInstanceOf<T> extends BaseMatcher {
+  final String _name;
+  const isNotInstanceOf([name = 'specified type']) : this._name = name;
+  bool matches(obj, MatchState matchState) => obj is! T;
+  // The description here is lame :-(
+  Description describe(Description description) =>
+      description.add('not an instance of ${_name}');
+}
+
 
 class ConfigKoans extends Configuration {
   final PATH = 'lib/src/';
