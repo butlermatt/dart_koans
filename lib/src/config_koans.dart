@@ -5,44 +5,16 @@
 #import('dart:io');
 
 /// A [Matcher] that matches any [num] value
-const Matcher isNum = const _isNum();
-
-class _isNum extends BaseMatcher {
-  const _isNum();
-  bool matches(item, MatchState matchState) => item is num;
-  Description describe(Description description) =>
-      description.add('num');
-}
+Matcher isNum = new isInstanceOf<num>('num');
 
 /// A [Matcher] that maches any [int] value
-const Matcher isInt = const _isInt();
-
-class _isInt extends BaseMatcher {
-  const _isInt();
-  bool matches(item, MatchState matchState) => item is int;
-  Description describe(Description description) =>
-      description.add('int');
-}
+Matcher isInt = new isInstanceOf<int>('int');
 
 /// A [Matcher] that maches any [double] value
-const Matcher isDouble = const _isDouble();
-
-class _isDouble extends BaseMatcher {
-  const _isDouble();
-  bool matches(item, MatchState matchState) => item is double;
-  Description describe(Description description) =>
-      description.add('double');
-}
+Matcher isDouble = new isInstanceOf<double>('double');
 
 /// A [Matcher] that maches any [String] value
-const Matcher isString = const _isString();
-
-class _isString extends BaseMatcher {
-  const _isString();
-  bool matches(item, MatchState matchState) => item is String;
-  Description describe(Description description) =>
-      description.add('String');
-}
+Matcher isString =  new isInstanceOf<String>('String');
 
 class ConfigKoans extends Configuration {
   final PATH = 'lib/src/';
