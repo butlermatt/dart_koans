@@ -7,16 +7,16 @@
 const _____ = '<Fill in Value>';
 
 /// A [Matcher] that matches any [num] instance
-const Matcher isNum = const isInstanceOf<num>('num');
+const Matcher isNum = const myInstanceOf<num>('num');
 
 /// A [Matcher] that matches any [int] instance
-const Matcher isInt = const isInstanceOf<int>('int');
+const Matcher isInt = const myInstanceOf<int>('int');
 
 /// A [Matcher] that matches any [double] instance
-const Matcher isDouble = const isInstanceOf<double>('double');
+const Matcher isDouble = const myInstanceOf<double>('double');
 
 /// A [Matcher] that matches any [String] instance
-const Matcher isString =  const isInstanceOf<String>('String');
+const Matcher isString =  const myInstanceOf<String>('String');
 
 /// A [Matcher] that matches any non [num] instance
 const Matcher isNotNum = const isNotInstanceOf<num>('num');
@@ -30,6 +30,17 @@ const Matcher isNotDouble = const isNotInstanceOf<double>('double');
 /// A [Matcher] that matches any non [num] instance
 const Matcher isNotString = const isNotInstanceOf<String>('String');
 
+class myInstanceOf<T> extends BaseMatcher {
+  final String _name;
+  const myInstanceOf([name = 'specified type']) : this._name = name;
+  bool matches(obj, MatchState matchState) { 
+    if(obj == _____) return false;
+    return obj is T;
+  }
+  // The description here is lame :-(
+  Description describe(Description description) =>
+      description.add('an instance of ${_name}');
+}
 
 class isNotInstanceOf<T> extends BaseMatcher {
   final String _name;
