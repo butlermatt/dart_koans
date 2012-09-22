@@ -3,8 +3,9 @@
 
 #import('package:unittest/unittest.dart');
 #import('package:dart_koans/src/config_koans.dart');
+#import('package:dart_koans/src/colors.dart', prefix: 'colors');
 
-#source('package:dart_koans/src/koans_start.dart');
+#source('package:dart_koans/src/koans_variables.dart');
 
 const _____ = '<Fill in Value>';
 
@@ -13,8 +14,7 @@ void main() {
   var unitConf = new ConfigKoans();
   configure(unitConf);
   
-  print('Welcome to Dart Koans.');
-  print('This package is inspired by Ruby Koans.\n');
+  print('\n\t\t${colors.LT_WHITE('Dart Koans')}\n');
   
   start_here();
 }
