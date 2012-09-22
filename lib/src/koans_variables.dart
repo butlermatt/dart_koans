@@ -10,7 +10,6 @@ start_here() {
        */
         expect(_____, false);
       });
-    
     test('Beginning', () {
       /*
        * The comparison on the end will not always be a specific

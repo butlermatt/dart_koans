@@ -4,6 +4,8 @@
 #import('config_colors.dart', prefix: 'colors');
 #import('dart:io');
 
+const _____ = '<Fill in Value>';
+
 /// A [Matcher] that matches any [num] instance
 const Matcher isNum = const isInstanceOf<num>('num');
 
@@ -32,7 +34,10 @@ const Matcher isNotString = const isNotInstanceOf<String>('String');
 class isNotInstanceOf<T> extends BaseMatcher {
   final String _name;
   const isNotInstanceOf([name = 'specified type']) : this._name = name;
-  bool matches(obj, MatchState matchState) => obj is! T;
+  bool matches(obj, MatchState matchState) { 
+    if(obj == _____) return false;
+    return obj is! T;
+  }
   // The description here is lame :-(
   Description describe(Description description) =>
       description.add('not an instance of ${_name}');
