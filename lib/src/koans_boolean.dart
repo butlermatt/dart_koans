@@ -36,7 +36,7 @@ void using_boolean() {
          * also not the case in Dart.
          */
         var boolean = 1;
-        expect(_____, isNotBool));
+        expect(_____, isNotBool);
       });
     });
   });
