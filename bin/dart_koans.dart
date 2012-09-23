@@ -1,4 +1,3 @@
-#!/usr/bin/env dart
 #library('dart_koans');
 
 #import('package:unittest/unittest.dart');

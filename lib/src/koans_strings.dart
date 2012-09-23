@@ -17,10 +17,20 @@ void using_strings() {
       /*
        * Strings may also be defined with double quotes.
        * This is particularly useful if you need to use an
-       * apostrophe in a sentence
+       * apostrophe in a sentence.
        */
       String str = "Isn't this easy?";
       expect(str, equals(_____));
+    });
+    test('escape sequences', () {
+      /*
+       * You can use \ to escape special characters in a
+       * string. There is no difference between a single
+       * quoted or double quoted string with escape sequences.
+       * (some escape characters are \' \n \t)
+       */
+      String str = 'Single \'quoted\' or double\n';
+      expect(_____, equals("Single 'quoted' or double\n"));
     });
   });
 }
