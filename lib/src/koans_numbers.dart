@@ -43,7 +43,7 @@ start_here() {
        * variables, you may declare them as 'var' (short
        * for variable) or as a specific type.
        */
-      var variable = 5;
+      var number = 5;
       expect(_____, isNum);
     });
     group('Integers -', () {

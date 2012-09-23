@@ -6,6 +6,7 @@
 #import('package:dart_koans/src/config_colors.dart', prefix: 'colors');
 
 #source('package:dart_koans/src/koans_numbers.dart');
+#source('package:dart_koans/src/koans_strings.dart');
 
 const _____ = '<Fill in Value>';
 
@@ -17,4 +18,5 @@ void main() {
   print('\n\t\t${colors.LT_WHITE('Dart Koans')}\n');
   
   start_here();
+  using_strings();
 }
