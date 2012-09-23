@@ -6,6 +6,9 @@
 
 const _____ = '<Fill in Value>';
 
+/// A [Matcher] that matches any [bool] instance
+const Matcher isBool = const myInstanceOf<bool>('bool');
+
 /// A [Matcher] that matches any [num] instance
 const Matcher isNum = const myInstanceOf<num>('num');
 
@@ -17,6 +20,9 @@ const Matcher isDouble = const myInstanceOf<double>('double');
 
 /// A [Matcher] that matches any [String] instance
 const Matcher isString =  const myInstanceOf<String>('String');
+
+/// A [Matcher] that matches any non [bool] instance
+const Matcher isNotBool = const isNotInstanceOf<bool>('bool');
 
 /// A [Matcher] that matches any non [num] instance
 const Matcher isNotNum = const isNotInstanceOf<num>('num');
