@@ -19,7 +19,7 @@ void using_boolean() {
       });
     });
     group('Values -', () {
-      test('not 0', () {
+      test('0 not false', () {
         /*
          * Unlike many languages, the value 0 does not
          * automatically mean false. As a result 0 cannot
@@ -28,6 +28,15 @@ void using_boolean() {
          */
         var boolean = 0;
         expect(_____, isNotBool);
+      });
+      test('1 not true', () {
+        /*
+         * In many languages 1, or any positive integer,
+         * is considered to be 'true'. However this is 
+         * also not the case in Dart.
+         */
+        var boolean = 1;
+        expect(_____, isNotBool));
       });
     });
   });
