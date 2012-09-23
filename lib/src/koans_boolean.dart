@@ -18,5 +18,17 @@ void using_boolean() {
         expect(boolean, isBool);
       });
     });
+    group('Values -', () {
+      test('not 0', () {
+        /*
+         * Unlike many languages, the value 0 does not
+         * automatically mean false. As a result 0 cannot
+         * be used as a boolean value. We'll see why this
+         * is important soon.
+         */
+        var boolean = 0;
+        expect(_____, isNotBool);
+      });
+    });
   });
 }
