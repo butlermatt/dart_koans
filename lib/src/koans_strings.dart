@@ -47,6 +47,19 @@ void using_strings() {
       var broken = () => 'two ' + 'strings';
       expect(_____, throwsNoSuchMethodError);
     });
+    test('concatenation', () {
+      /*
+       * So in Dart, we can concatenate two strings together
+       * in a unique way... With no special operator at all.
+       * Since whitespace is not significant in Dart, if
+       * the VM sees two strings without any separator or
+       * semicolons, then they are automatically joined into
+       * one.
+       */
+      var str = 'One '
+          'and two.';
+      expect(_____, equals('One and two.'));
+    });
   });
 }
 /* Still to add: raw strings, triple quote strings,
