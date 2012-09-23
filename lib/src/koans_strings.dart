@@ -79,10 +79,21 @@ _____
 ''';
         expect(str, equals('One and\ntwo\n'));
       });
+      test('raw strings', () {
+        /*
+         * Finally, there is one additional type of string. This is
+         * a raw string. There are times when you don't want to
+         * escape anything or have to worry about special characters
+         * being interpreted. Raw strings are prepended with an 'r'
+         * Fill in _____ with the escaped version of str.
+         */
+        var str = r'\n is a new line\n';
+        expect(str, '_____');
+      });
     });
   });
 }
-/* Still to add: raw strings, 
+/* Still to add: 
  * string interpolation. Immutable. Many many string
  * methods.
  */
