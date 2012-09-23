@@ -53,14 +53,14 @@ start_here() {
          * particular dart as int (Integers) available for
          * whole numbers.
          */
-        int integer = 5;
+        int number = 5;
         expect(_____, isInt);
       });
       test('num', () {
         /*
          * The int type is a subclass of the num type.
          */
-        int integer = 5;
+        int number = 5;
         expect(_____, isNum);
       });
       test('var', () {
@@ -68,14 +68,14 @@ start_here() {
          * Dart can automagically infer types even if they
          * were not declared.
          */
-        var variable = 5;
+        var number = 5;
         expect(_____, isInt);
       });
       test('not decimal', () {
         /*
          * Note that decimal numbers are not Integers (int)
          */
-        var decimal = 5.3;
+        var number = 5.3;
         expect(_____, isNotInt);
       });
     });
@@ -86,14 +86,14 @@ start_here() {
          * double represents any decimal or floating point
          * number. 
          */
-        double decimal = 5.3;
+        double number = 5.3;
         expect(_____, isDouble);
       });
       test('num', () {
         /*
          * Just like int's, double's are a subclass of num.
          */
-        double decimal = 5.3;
+        double number = 5.3;
         expect(_____, isNum);
       });
       test('var', () {
@@ -101,7 +101,7 @@ start_here() {
          * And like int's, the dart VM can detect that a var
          * is actually holding a double.
          */
-        var decimal = 5.3;
+        var number = 5.3;
         expect(_____, isDouble);
       });
       test('not integer', () {
