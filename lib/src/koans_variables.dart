@@ -21,32 +21,30 @@ start_here() {
       expect(_____, isTrue);
     });
   });
-  group('Variables -', () {
-    group('Numbers -', () {
-      test('num - whole numbers', () {
-        /*
-         * Dart provides optional types to define variables. 
-         * The num type holds numbers including whole numbers
-         */
-        num number = 5;
-        expect(_____, isNum);
-      });
-      test('num - decimal numbers', () {
-        /*
-         * The num type can also hold decimal numbers
-         */
-        num number = 5.3;
-        expect(_____, isNum);
-      });
-      test('var', () {
-        /*
-         * The optional type system means that when declaring 
-         * variables, you may declare them as 'var' (short
-         * for variable) or as a specific type.
-         */
-        var variable = 5;
-        expect(_____, isNum);
-      });
+  group('Numbers -', () {
+    test('num - whole numbers', () {
+      /*
+       * Dart provides optional types to define variables. 
+       * The num type holds numbers including whole numbers
+       */
+      num number = 5;
+      expect(_____, isNum);
+    });
+    test('num - decimal numbers', () {
+      /*
+       * The num type can also hold decimal numbers
+       */
+      num number = 5.3;
+      expect(_____, isNum);
+    });
+    test('var', () {
+      /*
+       * The optional type system means that when declaring 
+       * variables, you may declare them as 'var' (short
+       * for variable) or as a specific type.
+       */
+      var variable = 5;
+      expect(_____, isNum);
     });
     group('Integers -', () {
       test('int', () {
@@ -80,6 +78,51 @@ start_here() {
         var decimal = 5.3;
         expect(_____, isNotInt);
       });
+    });
+    group('Decimals -', () {
+      test('double', () {
+        /*
+         * The other specific type of a number is a double.
+         * double represents any decimal or floating point
+         * number. 
+         */
+        double decimal = 5.3;
+        expect(_____, isDouble);
+      });
+      test('num', () {
+        /*
+         * Just like int's, double's are a subclass of num.
+         */
+        double decimal = 5.3;
+        expect(_____, isNum);
+      });
+      test('var', () {
+        /*
+         * And like int's, the dart VM can detect that a var
+         * is actually holding a double.
+         */
+        var decimal = 5.3;
+        expect(_____, isDouble);
+      });
+      test('not integer', () {
+        /*
+         * And remember that integers are not doubles.
+         */
+        var number = 5;
+        expect(_____, isNotDouble);
+      });
+    });
+    test('which type', () {
+      /*
+       * So based on what we learned above, in the check
+       * below replace _____ with either: isInt or isDouble
+       * 
+       * Note: while we have covered int and double, it is
+       * generally more idiomatic dart to either use 'num'
+       * or 'var'.
+       */
+      var number = 5.0;
+      expect(number, _____);
     });
   });
 }
