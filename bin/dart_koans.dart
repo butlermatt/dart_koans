@@ -5,6 +5,7 @@
 #import('package:dart_koans/src/config_colors.dart', prefix: 'colors');
 
 #source('package:dart_koans/src/koans_numbers.dart');
+#source('package:dart_koans/src/koans_boolean.dart');
 #source('package:dart_koans/src/koans_strings.dart');
 
 const _____ = '<Fill in Value>';
