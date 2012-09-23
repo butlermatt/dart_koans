@@ -11,6 +11,18 @@ comments surrounding the code that an individual should be able
 to determine what the code is trying to accomplish and what 
 values need to be provided to the default fill-in value.
 
+Installation
+------------
+
+In order to properly complete the koans, you will need to edit
+the files, as well as run the script. As such it is recommended
+that you download the .zip file and extract it to a local
+directory. Once downloaded to a local directory, you may need
+to run ```pub install``` in the directory to copy over the
+required sdk files. **Do Not** use *pub* to download and install
+the Koans to another project, as it will place the source files
+in the pub-cache and more difficult location for editing properly.
+
 Usage
 -----
 
