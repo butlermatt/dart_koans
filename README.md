@@ -29,6 +29,11 @@ either with your favorite CLI editor, or with the Dart Editor.
 Modify the file to correct the error, save and run the 
 application again. Continue until enlightenment is achieved.
 
+At current time, it is recommended that you run the application
+from the command line, and not from the Dart Editor. This is
+until one of two bugs are resolved: [Issue 4654](http://dartbug.com/4654)
+and [Issue 2789](http://dartbug.com/2789)
+
 Notice
 ------
 
