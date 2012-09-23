@@ -32,6 +32,21 @@ void using_strings() {
       String str = 'Single \'quoted\' or double\n';
       expect(_____, equals("Single 'quoted' or double\n"));
     });
+    test('no "+" concatenation', () {
+      /*
+       * In Dart, its recommended that a line of code does not
+       * surpass 80 characters. So how do we write a long string?
+       * In many languages you can use a '+' to join strings
+       * together. Not in Dart. It will throw an error (more
+       * on Errors and Exceptions later). We also had to wrap
+       * this in a function to properly see the error. We'll
+       * cover this usage later as well. For not just concentrate
+       * on the fact that two strings added together throws an
+       * error.
+       */
+      var broken = () => 'two ' + 'strings';
+      expect(_____, throwsNoSuchMethodError);
+    });
   });
 }
 /* Still to add: raw strings, triple quote strings,
