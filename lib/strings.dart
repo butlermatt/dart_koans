@@ -104,6 +104,17 @@ _____
         var str = 'Please $action to me';
         expect(str, equals('Please _____ to me'));
       });
+      test('toString', () {
+        /* 
+         * When interpolating an value into a string, if the value
+         * is not already a string, the method will automatically
+         * have its toString() method called to display its textual
+         * representation. We'll look at this function more when we
+         * look at Objects.
+         */
+        int number = 101;
+        expect('$number dalmatians', equals(_____));
+      });
       test('complex', () {
         /*
          * In some cases we want to put in more than just a simple
