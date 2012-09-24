@@ -38,6 +38,16 @@ void using_boolean() {
         var boolean = 1;
         expect(_____, isNotBool);
       });
+      test('negated', () {
+        /*
+         * As a result of the two above facts, only a
+         * boolean value may be negated.
+         * Replace _____ with the correct boolean value.
+         */
+        var boolean = true;
+        boolean = !boolean;
+        expect(boolean, equals(_____));
+      });
     });
   });
 }
