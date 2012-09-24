@@ -74,7 +74,7 @@ class ConfigKoans extends Configuration {
               String uncaughtError) {
     var total = passed + failed + errors;
     print('Process: ${colors.DK_GREEN('$passed tests have been passed')}. '
-        '${colors.DK_RED('${total - passed} remain.')}');
+        '${colors.DK_RED('${total - passed} remain.')}\n');
     
     if(failed > 0) {
       var fail;
@@ -89,7 +89,7 @@ class ConfigKoans extends Configuration {
       var components = failLine.split('/').last();
       components = components.split(':');
       
-      print('Failed at: ${fail.description}');
+      print('Failed at: ${colors.DK_YELLOW(fail.description)}');
       print(fail.message);
       print('Seek your answers in File:');
       print('${colors.DK_MAGENTA('$PATH${components[0]}')} ' 
