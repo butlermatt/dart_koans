@@ -6,6 +6,9 @@
 
 const _____ = '<Fill in Value>';
 
+/// A [Matcher] that matches any [Object] instance
+const Matcher isObject = const myInstanceOf<Object>('Object');
+
 /// A [Matcher] that matches any [bool] instance
 const Matcher isBool = const myInstanceOf<bool>('bool');
 
