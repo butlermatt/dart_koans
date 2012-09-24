@@ -62,7 +62,7 @@ class isNotInstanceOf<T> extends BaseMatcher {
 
 
 class ConfigKoans extends Configuration {
-  final PATH = 'lib/src/';
+  final PATH = 'lib/';
   
   String get name => 'Koans';
   
