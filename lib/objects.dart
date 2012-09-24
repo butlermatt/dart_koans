@@ -52,6 +52,18 @@ void using_objects() {
         var number = -3;
         expect(number.isNegative(), equals(_____));
       });
+      test('NoSuchMethodError', () {
+        /*
+         * In the event you call a method on an object which
+         * is not implemented, the object will generate (throw)
+         * a NoSuchMethodError. Later on we'll look at how we
+         * can catch errors, as well some special things we
+         * can do with NoSuchMethod.
+         */
+        var boolean = true;
+        var broken = () => boolean.causeError();
+        expect(_____, throwsNoSuchMethodError);
+      });
     });
   });
 }
