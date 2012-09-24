@@ -88,7 +88,34 @@ _____
          * Fill in _____ with the escaped version of str.
          */
         var str = r'\n is a new line\n';
-        expect(str, '_____');
+        expect(str, equals('_____'));
+      });
+    });
+    group('Interpolation -', () {
+      test('combining strings', () {
+        /*
+         * So what if you have a string variable that you want to
+         * join with another string? Or maybe put in the middle of
+         * another string? How do you join these strings together
+         * without a '+' operator? String interpolation comes to the
+         * rescue. Using a $ we can inject a variable into a string.
+         */
+        var action = 'be nice';
+        var str = 'Please $action to me';
+        expect(str, equals('Please _____ to me'));
+      });
+      test('complex', () {
+        /*
+         * In some cases we want to put in more than just a simple
+         * variables. Maybe we want a function or method call, or
+         * maybe even some simple expressions. If we add braces { }
+         * around our interpolation then we can provide much more
+         * complex values than a variable.
+         */
+        var one = 1;
+        var two = 2;
+        var str = '$one plus $two equals ${one + two}';
+        expect(str, equals('1 plus 2 equals _____'));
       });
     });
   });
