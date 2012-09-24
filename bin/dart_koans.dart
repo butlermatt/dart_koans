@@ -4,9 +4,9 @@
 #import('package:dart_koans/src/config_koans.dart');
 #import('package:dart_koans/src/config_colors.dart', prefix: 'colors');
 
-#source('package:dart_koans/koans_numbers.dart');
-#source('package:dart_koans/koans_boolean.dart');
-#source('package:dart_koans/koans_strings.dart');
+#source('package:dart_koans/numbers.dart');
+#source('package:dart_koans/boolean.dart');
+#source('package:dart_koans/strings.dart');
 
 const _____ = '<Fill in Value>';
 
