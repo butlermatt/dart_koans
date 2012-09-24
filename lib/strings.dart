@@ -129,10 +129,36 @@ _____
         expect(str, equals('1 plus 2 equals _____'));
       });
     });
+    group('Accessing -', () {
+      test('with []', () {
+        /*
+         * Similar to many languages, individual characters of a
+         * String can be accessed with the [] operator. We'll see
+         * this more when looking at Lists but for now know that
+         * just like other languages arrays/Lists start with an
+         * index of 0.
+         */
+        var str = 'My little string';
+        expect(str[1], equals(_____));
+      });
+      test('immutable', () {
+        /*
+         * Strings in Dart are immutable. This means once we have
+         * assigned a string. We cannot modify the string contents
+         * but must instead create a new string with the changes
+         * or reassign back to itself.
+         */
+        var str = 'Hello';
+        str = '$str there!';
+        // Need the small bit here to catch the error properly.
+        var broken = () => str[0] = 'h'; 
+        expect(_____, throwsNoSuchMethodError);
+      });
+    });
   });
 }
 /* Still to add: 
- * string interpolation. Immutable. Many many string
- * methods.
+ * Many many string methods.
+ * String builders.
  */
 
