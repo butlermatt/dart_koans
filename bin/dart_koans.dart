@@ -8,6 +8,7 @@
 #source('package:dart_koans/boolean.dart');
 #source('package:dart_koans/strings.dart');
 #source('package:dart_koans/objects.dart');
+#source('package:dart_koans/lists.dart');
 
 const _____ = '<Fill in Value>';
 
@@ -22,4 +23,5 @@ void main() {
   using_boolean();
   using_strings();
   using_objects();
+  using_lists();
 }
