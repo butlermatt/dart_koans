@@ -42,6 +42,18 @@ void using_lists() {
         var list = new List<int>();
         expect(_____, isList);
       });
+      test('Fixed-Size', () {
+        /*
+         * One final way to declare a list is by passing a size
+         * value to the constructor. This will create an 
+         * 'immutable list'. That is, it creates a which cannot
+         * grow or shrink in size. We'll see how this affects
+         * lists soon. This works with a standard list or a
+         * list using Generics.
+         */
+        var list = new List(10);
+        expect(_____, isList);
+      });
     });
   });
 }
