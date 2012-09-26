@@ -55,9 +55,29 @@ void using_lists() {
         expect(_____, isList);
       });
     });
+    group('Accessing -', () {
+      test('[]', () {
+        /*
+         * A list is of limited use if we can't access its
+         * contents. Using the [] to access a member of a
+         * list. Remember, List indexes start at 0.
+         */
+        var list = ['zero', true, 2, 3.5];
+        expect(list[1], equals(_____));
+      });
+      test('[]=', () {
+        /*
+         * We can use the same accessors to assign back into
+         * a variable.
+         */
+        var list = ['one', 'two', 'five'];
+        list[2] = 'three sir!';
+        expect(list, equals(['one', 'two', '_____']));
+      });
+    });
     group('Methods -', () {
-      group('length', () {
-        test('call', () {
+      group('length -', () {
+        test('calling', () {
           /*
            * One of the first methods we should look at for lists
            * is the one that tells us how many elements makes up
@@ -83,7 +103,6 @@ void using_lists() {
           expect(list.length, equals(_____));
         });
       }); // end of length group
-
     }); // end of methods group.
   }); // End of Lists group
 }
