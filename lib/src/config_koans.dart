@@ -24,6 +24,9 @@ const Matcher isDouble = const myInstanceOf<double>('double');
 /// A [Matcher] that matches any [String] instance
 const Matcher isString =  const myInstanceOf<String>('String');
 
+/// A [Matcher] that matches any [List] instance
+const Matcher isList =  const myInstanceOf<List>('List');
+
 /// A [Matcher] that matches any non [bool] instance
 const Matcher isNotBool = const isNotInstanceOf<bool>('bool');
 
