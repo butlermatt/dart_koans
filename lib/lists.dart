@@ -55,5 +55,35 @@ void using_lists() {
         expect(_____, isList);
       });
     });
-  });
+    group('Methods -', () {
+      group('length', () {
+        test('call', () {
+          /*
+           * One of the first methods we should look at for lists
+           * is the one that tells us how many elements makes up
+           * a list. We want to know the List.length
+           */
+          var list = [3, 2, true];
+          expect(list.length, equals(_____));
+        });
+        test('empty list', () {
+          /*
+           * When you call a constructor for a list. The inital
+           * list is empty. It doesn't matter if we're using a
+           * list with generics.
+           */
+          var list = new List<int>();
+          expect(list.length, equals(_____));
+        });
+        test('fixed size', () {
+          /*
+           * So what about when we have an immutable list?
+           */
+          var list = new List(10);
+          expect(list.length, equals(_____));
+        });
+      }); // end of length group
+
+    }); // end of methods group.
+  }); // End of Lists group
 }
