@@ -112,7 +112,54 @@ void using_lists() {
           var list = new List(10);
           expect(list.length, equals(_____));
         });
+        test('setting growing', () {
+          /*
+           * An often over looked feature is that you can also
+           * use length to set the size of a mutable list.
+           * If you are growing a list larger than it previously
+           * was, then new elements are added to the end and
+           * are initialized to null
+           */
+          var list = [0, 1, 2];
+          list.length = 5;
+          expect(list, equals(_____));
+        });
+        test('setting shirnking', () {
+          /*
+           * setting the length to less than the current size of
+           * a list, will cause the elements from the end to
+           * be removed.
+           */
+          var list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+          list.length = 3;
+          expect(list, equals(_____));
+        });
+        test('setting fixed size', () {
+          /*
+           * However if you try to set the size of an immutable
+           * list, it results in throwing an
+           * UnsupportedOperationException. Fill in 'broken'
+           * below.
+           */
+          var list = new List(5);
+          // Need below to properly wrap the exception.
+          var broken = () => list.length = 10;
+          expect(_____, throwsUnsupportedOperationException);
+        });
       }); // end of length group
+      group('add -', () {
+        test('calling', () {
+          /*
+           * Now some times you may not want to increase the
+           * size of a list one at a time before assigning to the
+           * index. Lists provide a convience function to add an
+           * element.
+           */
+          var list = [0, 1, 2];
+          list.add(3);
+          expect(list, equals(_____));
+        });
+      });
     }); // end of methods group.
   }); // End of Lists group
 }
