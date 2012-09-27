@@ -19,9 +19,9 @@ void main() {
   
   print('\n\t\t${colors.LT_WHITE('Dart Koans')}\n');
   
-  start_here();
-  using_boolean();
-  using_strings();
-  using_objects();
+//  start_here();
+//  using_boolean();
+//  using_strings();
+//  using_objects();
   using_lists();
 }

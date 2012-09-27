@@ -60,7 +60,7 @@ void using_lists() {
         /*
          * A list is of limited use if we can't access its
          * contents. Using the [] to access a member of a
-         * list. Remember, List indexes start at 0.
+         * list. The first element of a list is index 0.
          */
         var list = ['zero', true, 2, 3.5];
         expect(list[1], equals(_____));
@@ -68,11 +68,21 @@ void using_lists() {
       test('[]=', () {
         /*
          * We can use the same accessors to assign back into
-         * a variable.
+         * a variable. 
          */
         var list = ['one', 'two', 'five'];
         list[2] = 'three sir!';
         expect(list, equals(['one', 'two', '_____']));
+      });
+      test('Sub-lists', () {
+        /*
+         * Just as you would expect, you can access sublists
+         * with [][] One for each list you need to access.
+         * Write the expected indices to retreive the value
+         * in equals. (Don't forget indices start at 0).
+         */
+        var list = ['one', ['two', 2], ['three', 3.3, 3]];
+        expect(_____, equals(3.3));
       });
     });
     group('Methods -', () {
