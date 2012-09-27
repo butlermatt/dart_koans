@@ -146,7 +146,7 @@ void using_lists() {
           var broken = () => list.length = 10;
           expect(_____, throwsUnsupportedOperationException);
         });
-      }); // end of length group
+      });
       group('add -', () {
         test('calling', () {
           /*
@@ -158,6 +158,35 @@ void using_lists() {
           var list = [0, 1, 2];
           list.add(3);
           expect(list, equals(_____));
+        });
+        test('adding lists', () {
+          /* Now the add method is designed for adding one
+           * element to a list. So what do you suppose happens
+           * if you try adding another list to a list.
+           */
+          var list = [0, 1, 2];
+          list.add([3, 4]);
+          expect(list, equals(_____));
+        });
+        test('addAll', () {
+          /*
+           * Usually the previous test isn't exactly what you
+           * want to accomplish. Thus we have the addAll method
+           * which will add all of the items from a list.
+           */
+          var list = [0, 1, 2];
+          list.addAll([3, 4]);
+          expect(list, equals(_____));
+        });
+        test('add to fixed size', () {
+          /*
+           * And just like when we tried to change the length of
+           * an immutable list, trying to add to an immutable
+           * list will result in an UnsupportedOperationException
+           */
+          var list = new List(5);
+          var broken = () => list.add(10);
+          expect(_____, throwsUnsupportedOperationException);
         });
       });
     }); // end of methods group.
