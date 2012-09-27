@@ -68,7 +68,7 @@ class isNotInstanceOf<T> extends BaseMatcher {
 
 
 class ConfigKoans extends Configuration {
-  final PATH = 'lib/';
+  final LIB_DIR = 'lib/';
   
   String get name => 'Koans';
   
@@ -81,7 +81,6 @@ class ConfigKoans extends Configuration {
     var total = passed + failed + errors;
     print('Process: ${colors.DK_GREEN('$passed tests have been passed')}. '
         '${colors.DK_RED('${total - passed} remain.')}\n');
-    
     if(failed > 0) {
       var fail;
       for(var test in results) {
@@ -95,10 +94,12 @@ class ConfigKoans extends Configuration {
       var components = failLine.split('/').last();
       components = components.split(':');
       
+      var path = new Path('$LIB_DIR${components[0]}');
+      
       print('Failed at: ${colors.DK_YELLOW(fail.description)}');
       print(fail.message);
       print('Seek your answers in File:');
-      print('${colors.DK_MAGENTA('$PATH${components[0]}')} ' 
+      print('${colors.DK_MAGENTA(path.toNativePath())} ' 
         '(Line: ${components[1]} Column: ${components[2]}\n');
     } 
     
