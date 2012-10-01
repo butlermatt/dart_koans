@@ -71,14 +71,8 @@ class ConfigKoans extends Configuration {
   final LIB_DIR = 'lib/';
   
   ConfigKoans() {
-    var opts = new Options();
-    var path = new Path(opts.script);
-    var file = new File.fromPath(path);
-    var pathStr = file.fullPathSync();
-    path = new Path(pathStr);
-    pathStr = path.toNativePath();
-    var exp = const RegExp(r"|^/|");
-    if(exp.hasMatch(pathStr)) {
+    var osStr = Platform.operatingSystem;
+    if(osStr != 'windows') {
       colors.useAnsi = true;
     }
   }
