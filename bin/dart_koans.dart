@@ -17,8 +17,6 @@ void main() {
   var unitConf = new ConfigKoans();
   configure(unitConf);
   
-  print('\n\t\t${colors.LT_WHITE('Dart Koans')}\n');
-  
   start_here();
   using_boolean();
   using_strings();

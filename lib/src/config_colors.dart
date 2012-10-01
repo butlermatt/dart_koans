@@ -20,10 +20,19 @@ const int BG_BLUE = 44;
 const int BG_MAGENTA = 45;
 const int BG_CYAN = 46;
 const int BG_WHITE = 47;
+
+/// Determine if ansi colors are generated
+var useAnsi = false;
   
 String _formatString(String str, int color, bool bold) {
-  String stCd = new String.fromCharCodes([27, 91]);
-  return '${stCd}${bold ? '01' : ''};${color}m$str${stCd}${RESET}m';
+  var strOut;
+  if(useAnsi) {
+    String stCd = new String.fromCharCodes([27, 91]);
+    strOut = '${stCd}${bold ? '01' : ''};${color}m$str${stCd}${RESET}m';
+  } else {
+    strOut = str; 
+  }
+  return strOut;
 }
   
   /** Returns string [arg] with light (or bold) red text */

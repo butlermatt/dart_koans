@@ -70,9 +70,22 @@ class isNotInstanceOf<T> extends BaseMatcher {
 class ConfigKoans extends Configuration {
   final LIB_DIR = 'lib/';
   
+  ConfigKoans() {
+    var opts = new Options();
+    var path = new Path(opts.script);
+    var file = new File.fromPath(path);
+    file.fullPath().then((path_str) {
+      var exp = const RegExp(r"|^/|");
+      if(exp.hasMatch(path_str)) {
+        colors.useAnsi = true;
+      }
+    });
+  }
+  
   String get name => 'Koans';
   
   void onStart() {
+    print('\n\t\t${colors.LT_WHITE('Dart Koans')}\n');
     print('Beginning the path to enlightenment...');
   }
   
