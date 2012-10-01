@@ -74,12 +74,13 @@ class ConfigKoans extends Configuration {
     var opts = new Options();
     var path = new Path(opts.script);
     var file = new File.fromPath(path);
-    file.fullPath().then((path_str) {
-      var exp = const RegExp(r"|^/|");
-      if(exp.hasMatch(path_str)) {
-        colors.useAnsi = true;
-      }
-    });
+    var pathStr = file.fullPathSync();
+    path = new Path(pathStr);
+    pathStr = path.toNativePath();
+    var exp = const RegExp(r"|^/|");
+    if(exp.hasMatch(pathStr)) {
+      colors.useAnsi = true;
+    }
   }
   
   String get name => 'Koans';
