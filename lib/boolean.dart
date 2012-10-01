@@ -3,7 +3,7 @@ void using_boolean() {
     group('Declaring -', () {
       test('bool', () {
         /*
-         * Perhaps the similest type in Dart is the boolean (bool)
+         * Perhaps the simplest type in Dart is the boolean (bool)
          * Booleans accept only true or false values.
          */
         bool boolean = true;
