@@ -32,7 +32,7 @@ void using_lists() {
       });
       test('Using Generics', () {
         /*
-         * Occasionally, you may which to specify that a list
+         * Occasionally, you may wish to specify that a list
          * should only contain certain types. While dart is an
          * optionally typed language, and ultimately you can
          * assign any value to any variable (type), you can run
