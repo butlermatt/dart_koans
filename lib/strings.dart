@@ -166,8 +166,3 @@ _____
     });
   });
 }
-/* Still to add: 
- * Many many string methods.
- * String builders.
- */
-
