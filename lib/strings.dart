@@ -144,13 +144,22 @@ _____
       test('immutable', () {
         /*
          * Strings in Dart are immutable. This means once we have
-         * assigned a string. We cannot modify the string contents
-         * but must instead create a new string with the changes
-         * or reassign back to itself.
+         * assigned a string, we cannot modify the contents of that
+         * string. Instead we must create a new string and assign 
+         * it to a new variable name or back to the same variable
+         * name. Other languages you could change the elements of
+         * a string using the [] accessor. In Dart, trying to
+         * change a string like that will generate an error (also
+         * known as throwing an error).
          */
         var str = 'Hello';
         str = '$str there!';
-        // Need the small bit here to catch the error properly.
+        
+        // Because of how the testing framework works, we need to
+        // put any code that generates an error inside of a function.
+        // We'll cover that in more detail later. For now only be
+        // concerned that anything after the => below causes the
+        // error to be thrown.
         var broken = () => str[0] = 'h'; 
         expect(_____, throwsNoSuchMethodError);
       });
