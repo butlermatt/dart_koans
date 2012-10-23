@@ -41,7 +41,7 @@ void using_strings() {
          * together. Not in Dart. It will throw an error (more
          * on Errors and Exceptions later). We also had to wrap
          * this in a function to properly see the error. We'll
-         * cover this usage later as well. For not just concentrate
+         * cover this usage later as well. For now just concentrate
          * on the fact that two strings added together throws an
          * error.
          */
@@ -118,7 +118,7 @@ _____
       test('complex', () {
         /*
          * In some cases we want to put in more than just a simple
-         * variables. Maybe we want a function or method call, or
+         * variable. Maybe we want a function or method call, or
          * maybe even some simple expressions. If we add braces { }
          * around our interpolation then we can provide much more
          * complex values than a variable.
