@@ -2,7 +2,6 @@ library dart_koans;
 
 import 'package:unittest/unittest.dart';
 import 'package:dart_koans/src/config_koans.dart';
-import 'package:dart_koans/src/config_colors.dart' as colors;
 
 part 'package:dart_koans/numbers.dart';
 part 'package:dart_koans/boolean.dart';

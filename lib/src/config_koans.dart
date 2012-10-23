@@ -1,8 +1,8 @@
-#library('dart_koans');
+library koans_config;
 
-#import('package:unittest/unittest.dart');
-#import('config_colors.dart', prefix: 'colors');
-#import('dart:io');
+import 'package:unittest/unittest.dart';
+import 'config_colors.dart' as colors;
+import 'dart:io';
 
 const _____ = '<Fill in Value>';
 
