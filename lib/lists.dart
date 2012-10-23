@@ -23,8 +23,8 @@ void using_lists() {
       test('Constructor', () {
         /*
          * Lists can also be created with a constructor. We'll 
-         * learn about constructors more later on but lets take
-         * a peak now as its fairly common way of declaring a
+         * learn about constructors more later on, but let's take
+         * a peek now as it's a fairly common way of declaring a
          * list.
          */
         var list = new List();
