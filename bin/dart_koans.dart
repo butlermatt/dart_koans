@@ -1,14 +1,14 @@
-#library('dart_koans');
+library dart_koans;
 
-#import('package:unittest/unittest.dart');
-#import('package:dart_koans/src/config_koans.dart');
-#import('package:dart_koans/src/config_colors.dart', prefix: 'colors');
+import 'package:unittest/unittest.dart';
+import 'package:dart_koans/src/config_koans.dart';
+import 'package:dart_koans/src/config_colors.dart' as colors;
 
-#source('package:dart_koans/numbers.dart');
-#source('package:dart_koans/boolean.dart');
-#source('package:dart_koans/strings.dart');
-#source('package:dart_koans/objects.dart');
-#source('package:dart_koans/lists.dart');
+part 'package:dart_koans/numbers.dart';
+part 'package:dart_koans/boolean.dart';
+part 'package:dart_koans/strings.dart';
+part 'package:dart_koans/objects.dart';
+part 'package:dart_koans/lists.dart';
 
 const _____ = '<Fill in Value>';
 

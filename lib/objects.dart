@@ -1,3 +1,5 @@
+part of dart_koans;
+
 void using_objects() {
   group('Objects -', () {
     group('Everything -', () {

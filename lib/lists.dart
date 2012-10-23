@@ -1,3 +1,5 @@
+part of dart_koans;
+
 void using_lists() {
   group('Lists -', () {
     group('Declaring -', () {
