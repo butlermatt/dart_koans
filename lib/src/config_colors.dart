@@ -1,4 +1,4 @@
-#library('colors');
+library colors;
 
 const int RESET = 0;
 const int BOLD = 1;

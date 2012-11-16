@@ -3,6 +3,8 @@ library dart_koans;
 import 'package:unittest/unittest.dart';
 import 'package:dart_koans/src/config_koans.dart';
 
+import 'dart:isolate';
+
 part 'package:dart_koans/numbers.dart';
 part 'package:dart_koans/boolean.dart';
 part 'package:dart_koans/strings.dart';
@@ -21,4 +23,5 @@ void main() {
   using_strings();
   using_objects();
   using_lists();
+  
 }

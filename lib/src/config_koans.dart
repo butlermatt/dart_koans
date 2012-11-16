@@ -1,73 +1,73 @@
 library koans_config;
 
-import 'package:unittest/unittest.dart';
+import 'package:unittest/unittest.dart' as ut;
 import 'config_colors.dart' as colors;
 import 'dart:io';
 
 const _____ = '<Fill in Value>';
 
 /// A [Matcher] that matches any [Object] instance
-const Matcher isObject = const myInstanceOf<Object>('Object');
+const ut.Matcher isObject = const myInstanceOf<Object>('Object');
 
 /// A [Matcher] that matches any [bool] instance
-const Matcher isBool = const myInstanceOf<bool>('bool');
+const ut.Matcher isBool = const myInstanceOf<bool>('bool');
 
 /// A [Matcher] that matches any [num] instance
-const Matcher isNum = const myInstanceOf<num>('num');
+const ut.Matcher isNum = const myInstanceOf<num>('num');
 
 /// A [Matcher] that matches any [int] instance
-const Matcher isInt = const myInstanceOf<int>('int');
+const ut.Matcher isInt = const myInstanceOf<int>('int');
 
 /// A [Matcher] that matches any [double] instance
-const Matcher isDouble = const myInstanceOf<double>('double');
+const ut.Matcher isDouble = const myInstanceOf<double>('double');
 
 /// A [Matcher] that matches any [String] instance
-const Matcher isString =  const myInstanceOf<String>('String');
+const ut.Matcher isString =  const myInstanceOf<String>('String');
 
 /// A [Matcher] that matches any [List] instance
-const Matcher isList =  const myInstanceOf<List>('List');
+//const ut.Matcher isList =  const myInstanceOf<List>('List');
 
 /// A [Matcher] that matches any non [bool] instance
-const Matcher isNotBool = const isNotInstanceOf<bool>('bool');
+const ut.Matcher isNotBool = const isNotInstanceOf<bool>('bool');
 
 /// A [Matcher] that matches any non [num] instance
-const Matcher isNotNum = const isNotInstanceOf<num>('num');
+const ut.Matcher isNotNum = const isNotInstanceOf<num>('num');
 
 /// A [Matcher] that matches any non [int] instance
-const Matcher isNotInt = const isNotInstanceOf<int>('int');
+const ut.Matcher isNotInt = const isNotInstanceOf<int>('int');
 
 /// A [Matcher] that matches any non [double] instance
-const Matcher isNotDouble = const isNotInstanceOf<double>('double');
+const ut.Matcher isNotDouble = const isNotInstanceOf<double>('double');
 
 /// A [Matcher] that matches any non [num] instance
-const Matcher isNotString = const isNotInstanceOf<String>('String');
+const ut.Matcher isNotString = const isNotInstanceOf<String>('String');
 
-class myInstanceOf<T> extends BaseMatcher {
+class myInstanceOf<T> extends ut.BaseMatcher {
   final String _name;
   const myInstanceOf([name = 'specified type']) : this._name = name;
-  bool matches(obj, MatchState matchState) { 
+  bool matches(obj, ut.MatchState matchState) { 
     if(obj == _____) return false;
     return obj is T;
   }
   // The description here is lame :-(
-  Description describe(Description description) =>
+  ut.Description describe(ut.Description description) =>
       description.add('an instance of ${_name}');
 }
 
-class isNotInstanceOf<T> extends BaseMatcher {
+class isNotInstanceOf<T> extends ut.BaseMatcher {
   final String _name;
   const isNotInstanceOf([name = 'specified type']) : this._name = name;
-  bool matches(obj, MatchState matchState) { 
+  bool matches(obj, ut.MatchState matchState) { 
     if(obj == _____) return false;
     return obj is! T;
   }
   // The description here is lame :-(
-  Description describe(Description description) =>
+  ut.Description describe(ut.Description description) =>
       description.add('not an instance of ${_name}');
 }
 
 
-class ConfigKoans extends Configuration {
+class ConfigKoans extends ut.Configuration {
   final LIB_DIR = 'lib/';
   
   ConfigKoans() {
@@ -84,7 +84,7 @@ class ConfigKoans extends Configuration {
     print('Beginning the path to enlightenment...');
   }
   
-  void onDone(int passed, int failed, int errors, List<TestCase> results,
+  void onDone(int passed, int failed, int errors, List<ut.TestCase> results,
               String uncaughtError) {
     var total = passed + failed + errors;
     print('Process: ${colors.DK_GREEN('$passed tests have been passed')}. '
@@ -99,7 +99,7 @@ class ConfigKoans extends Configuration {
       }
       
       var failLine = fail.stackTrace.split('\n')[3];
-      var components = failLine.split('/').last();
+      var components = failLine.split('/').last;
       components = components.split(':');
       
       var path = new Path('$LIB_DIR${components[0]}');

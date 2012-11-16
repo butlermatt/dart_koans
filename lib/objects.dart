@@ -48,11 +48,11 @@ void using_objects() {
          * 'type' (or Class as we will see later) has its own
          * selection of methods as well. Such as a check to
          * see if a number is positive or negative.
-         * Hint: isNegative() method returns a boolean
-         * (true/false) value).
+         * Hint: isNegative is a property which returns a 
+         * boolean (true/false) value.
          */
         var number = -3;
-        expect(number.isNegative(), equals(_____));
+        expect(number.isNegative, equals(_____));
       });
       test('NoSuchMethodError', () {
         /*

@@ -146,7 +146,7 @@ void using_lists() {
           var list = new List(5);
           // Need below to properly wrap the exception.
           var broken = () => list.length = 10;
-          expect(_____, throwsUnsupportedOperationException);
+          expect(_____, throwsUnsupportedError);
         });
       });
       group('add -', () {
@@ -188,7 +188,7 @@ void using_lists() {
            */
           var list = new List(5);
           var broken = () => list.add(10);
-          expect(_____, throwsUnsupportedOperationException);
+          expect(_____, throwsUnsupportedError);
         });
       });
     }); // end of methods group.
