@@ -2,7 +2,7 @@ part of dart_koans;
 
 void using_strings() {
   group('Strings -', () {
-    group('Declaring - ', () {
+    group('Declaring -', () {
       test('single quotes', () {
         /*
          * Strings are another very important type that
