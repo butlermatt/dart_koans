@@ -2,7 +2,7 @@ part of dart_koans;
 
 void using_strings() {
   group('Strings -', () {
-    group('Declaring - ', () {
+    group('Declaring -', () {
       test('single quotes', () {
         /*
          * Strings are another very important type that
@@ -14,7 +14,7 @@ void using_strings() {
          * Fill in what str should equal below.
          */
         String str = 'This is a string.';
-        expect(str, equals(_____));
+        expect(_____, equals('This is a string.'));
       });
       test('double quotes', () {
         /*
@@ -23,7 +23,7 @@ void using_strings() {
          * apostrophe in a sentence.
          */
         String str = "Isn't this easy?";
-        expect(str, equals(_____));
+        expect(str, equals("_____"));
       });
       test('escape sequences', () {
         /*
@@ -33,35 +33,7 @@ void using_strings() {
          * (some escape characters are \' \n \t)
          */
         String str = 'Single \'quoted\' or double\n';
-        expect(_____, equals("Single 'quoted' or double\n"));
-      });
-      test('no "+" concatenation', () {
-        /*
-         * In Dart, its recommended that a line of code does not
-         * surpass 80 characters. So how do we write a long string?
-         * In many languages you can use a '+' to join strings
-         * together. Not in Dart. It will throw an error (more
-         * on Errors and Exceptions later). We also had to wrap
-         * this in a function to properly see the error. We'll
-         * cover this usage later as well. For now just concentrate
-         * on the fact that two strings added together throws an
-         * error.
-         */
-        var broken = () => 'two ' + 'strings';
-        expect(_____, throwsNoSuchMethodError);
-      });
-      test('concatenation', () {
-        /*
-         * So in Dart, we can concatenate two strings together
-         * in a unique way... With no special operator at all.
-         * Since whitespace is not significant in Dart, if
-         * the VM sees two strings without any separator or
-         * semicolons, then they are automatically joined into
-         * one.
-         */
-        var str = 'One '
-            'and two.';
-        expect(_____, equals('One and two.'));
+        expect(str, equals("_____\n"));
       });
       test('triple quotes', () {
         /*
@@ -91,6 +63,46 @@ _____
          */
         var str = r'\n is a new line\n';
         expect(str, equals('_____'));
+      });
+    });
+    group('Concatenation -', () {
+      test('adjoining', () {
+        /*
+         * In Dart, it's recommended that a line of code does not
+         * surpass 80 characters. So how do we write a long string?
+         * In Dart, we can concatenate two strings together
+         * in a unique way... With no special operator at all.
+         * Since whitespace is not significant in Dart, if
+         * the VM sees two strings without any separator or
+         * semicolons, then they are automatically joined into
+         * one.
+         */
+        var str = 'One '
+            'and two.';
+        expect(_____, equals('One and two.'));
+      });
+      test('"+" concatenation', () {
+        /*
+         * Strings may also be concatenated by using the "+"
+         * operator.
+         */
+        var str = 'One and ';
+        var str2 = 'two.';
+        expect(str + str2, equals(_____));
+      });
+      test('"+" only with strings', () {
+        /*
+         * Unlike many other languages, you cannot use the '+'
+         * operator to join a string and a different type
+         * together. Only strings may be concatenated to
+         * strings with the '+' operator.
+         * We also had to wrap this in a function to properly see
+         * the error. We'll cover this usage later as well. For 
+         * now just concentrate on the fact that a string and 
+         * non-string added together throws an error.
+         */
+        var broken = () => 'two ' + 3;
+        expect(_____, throwsArgumentError);
       });
     });
     group('Interpolation -', () {
