@@ -10,7 +10,7 @@ start_here() {
        * and re-run the application to verify your fix.
        * Below, change _____ to be false and try to proceed.
        */
-        expect(_____, isFalse);
+        expect(_____, equals(false));
       });
     test('Beginning', () {
       /*
