@@ -87,7 +87,7 @@ class ConfigKoans extends ut.Configuration {
   void onSummary(int passed, int failed, int errors, List<ut.TestCase> results,
               String uncaughtError) {
     var total = passed + failed + errors;
-    print('Process: ${colors.DK_GREEN('$passed tests have been passed')}. '
+    print('Progress: ${colors.DK_GREEN('$passed tests have been passed')}. '
         '${colors.DK_RED('${total - passed} remain.')}\n');
     if(failed > 0) {
       var fail;
