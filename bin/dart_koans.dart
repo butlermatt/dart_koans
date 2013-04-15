@@ -16,7 +16,7 @@ const _____ = '<Fill in Value>';
 void main() {
   // Setup configuration for unittest
   var unitConf = new ConfigKoans();
-  unittestConfiguration = unitConf;  //configure(unitConf);
+  unittestConfiguration = unitConf;
   
   start_here();
   using_boolean();
