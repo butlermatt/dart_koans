@@ -27,7 +27,7 @@ start_here() {
     test('num - whole numbers', () {
       /*
        * Dart provides optional types to define variables. 
-       * The num type holds numbers including whole numbers
+       * The num type holds numbers including whole numbers.
        */
       num number = 5;
       expect(_____, isNum);
@@ -80,6 +80,15 @@ start_here() {
         var number = 5.3;
         expect(_____, isNotInt);
       });
+      test('arbitrary size', () {
+        /*
+         * Integers in the Dart VM (how we're running our tests)
+         * are of an arbitrary size. Unlike in many other languages
+         * where they have a maximum upper limit.
+         */
+        var number = 100085866835557563992823856846813251884354791321628;
+        expect(_____, isInt);
+      });
     });
     group('Decimals -', () {
       test('double', () {
@@ -93,7 +102,7 @@ start_here() {
       });
       test('num', () {
         /*
-         * Just like int's, double's are a subclass of num.
+         * Just like integers, doubles are a subclass of num.
          */
         double number = 5.3;
         expect(_____, isNum);
@@ -112,6 +121,15 @@ start_here() {
          */
         var number = 5;
         expect(_____, isNotDouble);
+      });
+      test('supports exponents', () {
+        /* 
+         * Double numbers also support exponent notation. 
+         * Integers do not.
+         */
+        var number = 1.423e12;
+        expect(_____, isDouble);
+        expect(_____, isNotInt);
       });
     });
     test('which type', () {
