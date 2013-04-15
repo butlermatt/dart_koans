@@ -84,7 +84,7 @@ class ConfigKoans extends ut.Configuration {
     print('Beginning the path to enlightenment...');
   }
   
-  void onDone(int passed, int failed, int errors, List<ut.TestCase> results,
+  void onSummary(int passed, int failed, int errors, List<ut.TestCase> results,
               String uncaughtError) {
     var total = passed + failed + errors;
     print('Process: ${colors.DK_GREEN('$passed tests have been passed')}. '
