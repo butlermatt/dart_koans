@@ -98,17 +98,18 @@ class ConfigKoans extends ut.Configuration {
         }
       }
       
-      var failLine = fail.stackTrace.split('\n')[3];
+      var failLine = fail.stackTrace.trim();
       var components = failLine.split('/').last;
-      components = components.split(':');
-      
-      var path = new Path('$LIB_DIR${components[0]}');
+      components = components.split(' ');
+      var fileName = components[0];
+      components = components[1].split(':');
+      var path = new Path('$LIB_DIR${fileName}');
       
       print('Failed at: ${colors.DK_YELLOW(fail.description)}');
       print(fail.message);
       print('Seek your answers in File:');
       print('${colors.DK_MAGENTA(path.toNativePath())} ' 
-        '(Line: ${components[1]} Column: ${components[2]}\n');
+        '(Line: ${components[0]} Column: ${components[1]})\n');
     } 
     
     if(errors + failed != 0) {
