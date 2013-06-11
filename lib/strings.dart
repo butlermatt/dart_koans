@@ -22,18 +22,22 @@ void using_strings() {
          * This is particularly useful if you need to use an
          * apostrophe in a sentence.
          */
-        String str = "Isn't this easy?";
-        expect(str, equals("_____"));
+        String str = "Wasn't that easy?";
+        expect(str, equals(_____));
       });
       test('escape sequences', () {
         /*
          * You can use \ to escape special characters in a
          * string. There is no difference between a single
          * quoted or double quoted string with escape sequences.
-         * (some escape characters are \' \n \t)
+         * Some escape characters are:
+         *  \' for a '
+         *  \\ for a \
+         *  \n for a new line
+         *  \t for a tab space.
          */
         String str = 'Single \'quoted\' or double\n';
-        expect(str, equals("_____\n"));
+        expect(str, equals("Single 'quoted' or double\n"));
       });
       test('triple quotes', () {
         /*
@@ -49,7 +53,7 @@ void using_strings() {
          */
         var str = '''
 One and
-_____
+two
 ''';
         expect(str, equals('One and\ntwo\n'));
       });
@@ -62,7 +66,7 @@ _____
          * Fill in _____ with the escaped version of str.
          */
         var str = r'\n is a new line\n';
-        expect(str, equals('_____'));
+        expect(str, equals('\\n is a new line\\n'));
       });
     });
     group('Concatenation -', () {
@@ -94,7 +98,7 @@ _____
         /*
          * Unlike many other languages, you cannot use the '+'
          * operator to join a string and a different type
-         * together. Only strings may be concatenated to
+         * together. Only strings may be concatenated to other
          * strings with the '+' operator.
          * We also had to wrap this in a function to properly see
          * the error. We'll cover this usage later as well. For 
