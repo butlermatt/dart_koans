@@ -37,7 +37,7 @@ void using_strings() {
          *  \t for a tab space.
          */
         String str = 'Single \'quoted\' or double\n';
-        expect(str, equals("Single 'quoted' or double\n"));
+        expect(str, equals("_____\n"));
       });
       test('triple quotes', () {
         /*
@@ -53,7 +53,7 @@ void using_strings() {
          */
         var str = '''
 One and
-two
+_____
 ''';
         expect(str, equals('One and\ntwo\n'));
       });
@@ -66,7 +66,7 @@ two
          * Fill in _____ with the escaped version of str.
          */
         var str = r'\n is a new line\n';
-        expect(str, equals('\\n is a new line\\n'));
+        expect(str, equals('_____'));
       });
     });
     group('Concatenation -', () {
