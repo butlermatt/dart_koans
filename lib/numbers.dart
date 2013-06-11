@@ -52,7 +52,7 @@ start_here() {
       test('int', () {
         /*
          * Dart also has more specific types of numbers. In
-         * particular dart as int (Integers) available for
+         * particular dart has int (Integers) available for
          * whole numbers.
          */
         int number = 5;
@@ -60,7 +60,9 @@ start_here() {
       });
       test('num', () {
         /*
-         * The int type is a subclass of the num type.
+         * The int type is a subclass of the num type. More
+         * on subclasses later. For now, just know that an 
+         * int is a num.
          */
         int number = 5;
         expect(_____, isNum);
