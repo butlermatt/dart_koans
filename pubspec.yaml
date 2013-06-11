@@ -1,5 +1,6 @@
 name: dart_koans
-version: 0.0.1
+version: 0.0.2
 author: Matthew Butler
+homepage: https://github.com/butlermatt/dart_koans
 dependencies:
-  unittest: any
+  unittest: 0.5.16
