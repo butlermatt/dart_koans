@@ -17,8 +17,8 @@ start_here() {
        * The comparison on the end will not always be a specific
        * type, however between the context, comments, and most
        * importantly, the error message you receive when you try
-       * to run the program, should tell you what you need to do
-       * to make the test pass.
+       * to run the program, it should tell you what you need to
+       * do to make the test pass.
        */
       expect(_____, isTrue);
     });
@@ -61,7 +61,7 @@ start_here() {
       test('num', () {
         /*
          * The int type is a subclass of the num type. More
-         * on subclasses later. For now, just know that an 
+         * on subclasses later. For now just know that an 
          * int is a num.
          */
         int number = 5;
@@ -69,7 +69,7 @@ start_here() {
       });
       test('var', () {
         /*
-         * Dart can automagically infer types even if they
+         * Dart can automatically infer types even if they
          * were not declared.
          */
         var number = 5;
@@ -95,9 +95,9 @@ start_here() {
     group('Decimals -', () {
       test('double', () {
         /*
-         * The other specific type of a number is a double.
-         * double represents any decimal or floating point
-         * number. 
+         * The other specific type of a number in dart is a 
+         * double. A double represents any decimal or floating
+         * point number. 
          */
         double number = 5.3;
         expect(_____, isDouble);

@@ -27,6 +27,12 @@ void using_boolean() {
          * automatically mean false. As a result 0 cannot
          * be used as a boolean value. We'll see why this
          * is important soon.
+         * 
+         * (Strictly speaking, this is not 100% accurate,
+         * however it is only noticable when running in 
+         * unchecked mode, in which case everything except
+         * true, is false. See the language specification
+         * for details: http://goo.gl/gBUIZ )
          */
         var boolean = 0;
         expect(_____, isNotBool);
