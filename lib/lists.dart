@@ -126,7 +126,7 @@ void using_lists() {
           list.length = 5;
           expect(list, equals(_____));
         });
-        test('setting shirnking', () {
+        test('setting shrinking', () {
           /*
            * setting the length to less than the current size of
            * a list, will cause the elements from the end to
