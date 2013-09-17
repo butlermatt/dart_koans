@@ -1,6 +1,7 @@
 library koans_config;
 
 import 'package:unittest/unittest.dart' as ut;
+import 'package:path/path.dart' as path;
 import 'config_colors.dart' as colors;
 import 'dart:io';
 
@@ -42,10 +43,12 @@ const ut.Matcher isNotDouble = const isNotInstanceOf<double>('double');
 /// A [Matcher] that matches any non [num] instance
 const ut.Matcher isNotString = const isNotInstanceOf<String>('String');
 
-class myInstanceOf<T> extends ut.BaseMatcher {
+class myInstanceOf<T> extends ut.isInstanceOf<T> {
   final String _name;
-  const myInstanceOf([name = 'specified type']) : this._name = name;
-  bool matches(obj, ut.MatchState matchState) { 
+  
+  const myInstanceOf([name = 'specified type']): _name = name;
+  
+  bool matches(obj, Map matchState) { 
     if(obj == _____) return false;
     return obj is T;
   }
@@ -54,10 +57,10 @@ class myInstanceOf<T> extends ut.BaseMatcher {
       description.add('an instance of ${_name}');
 }
 
-class isNotInstanceOf<T> extends ut.BaseMatcher {
+class isNotInstanceOf<T> extends ut.isInstanceOf<T> {
   final String _name;
   const isNotInstanceOf([name = 'specified type']) : this._name = name;
-  bool matches(obj, ut.MatchState matchState) { 
+  bool matches(obj, Map matchState) { 
     if(obj == _____) return false;
     return obj is! T;
   }
@@ -67,7 +70,7 @@ class isNotInstanceOf<T> extends ut.BaseMatcher {
 }
 
 
-class ConfigKoans extends ut.Configuration {
+class ConfigKoans extends ut.SimpleConfiguration {
   final LIB_DIR = 'lib/';
   
   ConfigKoans() {
@@ -98,17 +101,20 @@ class ConfigKoans extends ut.Configuration {
         }
       }
       
-      var failLine = fail.stackTrace.trim();
+      var failLines = fail.stackTrace.toString().trim().split('\n');
+      var failLine = failLines.firstWhere((el) {
+        return el.contains('dart_koans');
+      });
       var components = failLine.split('/').last;
       components = components.split(' ');
       var fileName = components[0];
       components = components[1].split(':');
-      var path = new Path('$LIB_DIR${fileName}');
+      var pathBuild = new path.Builder(root: LIB_DIR);
       
       print('Failed at: ${colors.DK_YELLOW(fail.description)}');
       print(fail.message);
       print('Seek your answers in File:');
-      print('${colors.DK_MAGENTA(path.toNativePath())} ' 
+      print('${colors.DK_MAGENTA(pathBuild.resolve(fileName)) } ' 
         '(Line: ${components[0]} Column: ${components[1]})\n');
     } 
     

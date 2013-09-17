@@ -3,4 +3,5 @@ version: 0.0.2
 author: Matthew Butler
 homepage: https://github.com/butlermatt/dart_koans
 dependencies:
-  unittest: 0.5.16
+  path: 0.7.3+1
+  unittest: 0.7.3+1
