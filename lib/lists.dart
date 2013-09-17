@@ -159,7 +159,7 @@ void using_lists() {
            */
           var list = [0, 1, 2];
           list.add(3);
-          expect(list, equals(_____));
+          expect(list, equals([_____]));
         });
         test('adding lists', () {
           /* Now the add method is designed for adding one
@@ -168,7 +168,7 @@ void using_lists() {
            */
           var list = [0, 1, 2];
           list.add([3, 4]);
-          expect(list, equals(_____));
+          expect(list, equals([_____]));
         });
         test('addAll', () {
           /*
@@ -178,7 +178,7 @@ void using_lists() {
            */
           var list = [0, 1, 2];
           list.addAll([3, 4]);
-          expect(list, equals(_____));
+          expect(list, equals([_____]));
         });
         test('add to fixed size', () {
           /*
