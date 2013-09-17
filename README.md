@@ -2,7 +2,7 @@ Dart Koans
 ==========
 
 This application is inspired by Ruby Koans. The idea is simple:
-You acheive enlightenment though a process of failures. As each
+You achieve enlightenment though a process of failures. As each
 failure is overcome you get one step closer to enlightenment.
 
 In practice, the _Dart Koans_ allow you to learn Dart through a
@@ -49,7 +49,12 @@ and [Issue 2789](http://dartbug.com/2789)
 Notice
 ------
 
-This is currently still very unstable and a work in progress.
-There are numerous areas which are subject to change as
+If you load the project in the Dart Editor, you can expect to
+see several warnings and hints about the project in various
+files. This is to be expected, as each test is designed to fail
+in order to highligh specifics about the Dart language.
+
+Also Note: This is currently still very unstable and a work in 
+progress. There are numerous areas which are subject to change as
 development progresses. 
 
