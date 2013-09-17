@@ -120,6 +120,8 @@ class ConfigKoans extends ut.SimpleConfiguration {
     
     if(errors + failed != 0) {
       print('You have not yet reached enlightenment.');
+    } else {
+      print('Congradulations! You\'ve reached enlightenment');
     }
     
     exit(0);
