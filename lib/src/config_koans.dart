@@ -109,12 +109,14 @@ class ConfigKoans extends ut.SimpleConfiguration {
       components = components.split(' ');
       var fileName = components[0];
       components = components[1].split(':');
-      var pathBuild = new path.Builder(root: LIB_DIR);
+
+      var context = new path.Context(style: path.Style.windows);
+      var lookInFile = context.join(LIB_DIR, fileName);
       
       print('Failed at: ${colors.DK_YELLOW(fail.description)}');
       print(fail.message);
       print('Seek your answers in File:');
-      print('${colors.DK_MAGENTA(pathBuild.resolve(fileName)) } ' 
+      print('${colors.DK_MAGENTA(lookInFile) } ' 
         '(Line: ${components[0]} Column: ${components[1]})\n');
     } 
     
