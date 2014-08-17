@@ -1,3 +1,7 @@
-packages
-TODO
+*~
 .project
+.buildlog
+packages
+deploy
+build
+*.sublime-*
