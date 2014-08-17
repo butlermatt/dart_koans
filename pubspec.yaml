@@ -1,5 +1,5 @@
 name: dart_koans
-version: 0.0.2+1
+version: 0.0.2+2
 author: Matthew Butler
 description: An application designed to help teach basics of the Dart language and core libraries through Unittests. It is highly recommended that this package is downloaded manually or cloning the github repository. *Do not* install with pub.
 homepage: https://github.com/butlermatt/dart_koans
