@@ -31,14 +31,14 @@ installed on your computer and working. If you're unsure about
 this process please see the 
 [Dart download](http://www.dartlang.org/downloads.html).
 
-To run all tests, run the command below:
+To run all tests, run:
 
     pub run test
 
 
-From the command line use the dartVM to run each test file:
+To run a single test file, run e.g.:
 
-    dart bin/dart_koans.dart
+    pub run test ./test/boolean_test.dart
 
 You should receive an error letting you know where your path to
 enlightenment is currently blocked. From there, edit the file
