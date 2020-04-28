@@ -1,9 +1,6 @@
 library koans_config;
 
 import 'package:test/test.dart' as ut;
-import 'package:path/path.dart' as path;
-import 'config_colors.dart' as colors;
-import 'dart:io';
 
 const _____ = '<Fill in Value>';
 
