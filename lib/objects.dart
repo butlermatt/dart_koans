@@ -9,7 +9,7 @@ void using_objects() {
          * but everything in Dart is an object.
          */
         var number = 5;
-        expect(_____, isObject);
+        expect(_____, isA<Object>());
       });
       test('Simple Types', () {
         /*
@@ -17,12 +17,12 @@ void using_objects() {
          * are objects as well.
          */
         bool boolean = true;
-        expect(_____, isObject);
+        expect(_____, isA<Object>());
       });
       test('Even literals', () {
         /*
          * Even literals are objects in Dart. Check if
-         * 5 isNum and if it isObject.
+         * 5 isNum and if it isA<Object>().
          * 
          * Note that the isXxxx notation is the the correct
          * way of checking a type. We'll look at that later
