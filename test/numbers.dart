@@ -2,7 +2,7 @@ import "package:test/test.dart";
 
 const _____ = "<Fill in value>";
 
-start_here() {
+void main() {
   group('Introduction -', () {
     test('First steps', () {
       /*

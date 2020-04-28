@@ -2,7 +2,7 @@ import "package:test/test.dart";
 
 const _____ = "<Fill in value>";
 
-void using_boolean() {
+void main() {
   group('Boolean -', () {
     group('Declaring -', () {
       test('bool', () {

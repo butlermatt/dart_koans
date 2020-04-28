@@ -2,7 +2,7 @@ import "package:test/test.dart";
 
 const _____ = "<Fill in value>";
 
-void using_lists() {
+void main() {
   group('Lists -', () {
     group('Declaring -', () {
       test('literal', () {
