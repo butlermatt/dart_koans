@@ -168,7 +168,9 @@ void main() {
            * element to a list. So what do you suppose happens
            * if you try adding another list to a list.
            */
-          var list = [0, 1, 2];
+
+          // This must be declared explicitly in Dart2.
+          var list = [0, 1, [2]];
           list.add([3, 4]);
           expect(list, equals([_____]));
         });
