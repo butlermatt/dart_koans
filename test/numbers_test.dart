@@ -90,8 +90,8 @@ void main() {
          * are of an arbitrary size. Unlike in many other languages
          * where they have a maximum upper limit.
          */
-        var number = 100085866835557563992823856846813251884354791321628;
-        expect(_____, isA<int>());
+        var number = BigInt.parse("100085866835557563992823856846813251884354791321628");
+        expect(_____, isA<BigInt>());
       });
     });
     group('Decimals -', () {
