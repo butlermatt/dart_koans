@@ -1,4 +1,4 @@
-part of dart_koans;
+part of dart2_koans;
 
 start_here() {
   group('Introduction -', () {

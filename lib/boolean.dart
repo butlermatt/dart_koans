@@ -1,4 +1,4 @@
-part of dart_koans;
+part of dart2_koans;
 
 void using_boolean() {
   group('Boolean -', () {
