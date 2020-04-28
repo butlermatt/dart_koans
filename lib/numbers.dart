@@ -30,14 +30,14 @@ start_here() {
        * The num type holds numbers including whole numbers.
        */
       num number = 5;
-      expect(_____, isNum);
+      expect(_____, isA<num>());
     });
     test('num - decimal numbers', () {
       /*
        * The num type can also hold decimal numbers
        */
       num number = 5.3;
-      expect(_____, isNum);
+      expect(_____, isA<num>());
     });
     test('var', () {
       /*
@@ -46,7 +46,7 @@ start_here() {
        * for variable) or as a specific type.
        */
       var number = 5;
-      expect(_____, isNum);
+      expect(_____, isA<num>());
     });
     group('Integers -', () {
       test('int', () {
@@ -56,7 +56,7 @@ start_here() {
          * whole numbers.
          */
         int number = 5;
-        expect(_____, isInt);
+        expect(_____, isA<int>());
       });
       test('num', () {
         /*
@@ -65,7 +65,7 @@ start_here() {
          * int is a num.
          */
         int number = 5;
-        expect(_____, isNum);
+        expect(_____, isA<num>());
       });
       test('var', () {
         /*
@@ -73,14 +73,14 @@ start_here() {
          * were not declared.
          */
         var number = 5;
-        expect(_____, isInt);
+        expect(_____, isA<int>());
       });
       test('not decimal', () {
         /*
          * Note that decimal numbers are not Integers (int)
          */
         var number = 5.3;
-        expect(_____, isNotInt);
+        expect(_____, isNot(isA<int>()));
       });
       test('arbitrary size', () {
         /*
@@ -89,7 +89,7 @@ start_here() {
          * where they have a maximum upper limit.
          */
         var number = 100085866835557563992823856846813251884354791321628;
-        expect(_____, isInt);
+        expect(_____, isA<int>());
       });
     });
     group('Decimals -', () {
@@ -100,14 +100,14 @@ start_here() {
          * point number. 
          */
         double number = 5.3;
-        expect(_____, isDouble);
+        expect(_____, isA<double>());
       });
       test('num', () {
         /*
          * Just like integers, doubles are a subclass of num.
          */
         double number = 5.3;
-        expect(_____, isNum);
+        expect(_____, isA<num>());
       });
       test('var', () {
         /*
@@ -115,14 +115,14 @@ start_here() {
          * is actually holding a double.
          */
         var number = 5.3;
-        expect(_____, isDouble);
+        expect(_____, isA<double>());
       });
       test('not integer', () {
         /*
          * And remember that integers are not doubles.
          */
         var number = 5;
-        expect(_____, isNotDouble);
+        expect(_____, isNot(isA<double>()));
       });
       test('supports exponents', () {
         /* 
@@ -130,8 +130,8 @@ start_here() {
          * Integers do not.
          */
         var number = 1.423e12;
-        expect(_____, isDouble);
-        expect(_____, isNotInt);
+        expect(_____, isA<double>());
+        expect(_____, isNot(isA<int>()));
       });
     });
     test('which type', () {
