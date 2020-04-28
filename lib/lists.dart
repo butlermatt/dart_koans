@@ -20,7 +20,7 @@ void using_lists() {
          * can contain multiple different types.
          */
         var list = [3, 2, 4.5, 0.03, 'string', ['sublist', true], false];
-        expect(_____, isList);
+        expect(_____, isA<List>());
       });
       test('Constructor', () {
         /*
@@ -30,7 +30,7 @@ void using_lists() {
          * list.
          */
         var list = new List();
-        expect(_____, isList);
+        expect(_____, isA<List>());
       });
       test('Using Generics', () {
         /*
@@ -42,7 +42,7 @@ void using_lists() {
          * or errors when unexpected types appear.
          */
         var list = new List<int>();
-        expect(_____, isList);
+        expect(_____, isA<List>());
       });
       test('Fixed-Size', () {
         /*
@@ -54,7 +54,7 @@ void using_lists() {
          * list using Generics.
          */
         var list = new List(10);
-        expect(_____, isList);
+        expect(_____, isA<List>());
       });
     });
     group('Accessing -', () {

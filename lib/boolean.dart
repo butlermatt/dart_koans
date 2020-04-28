@@ -17,7 +17,7 @@ void using_boolean() {
          * infer the type for us.
          */
         var boolean = _____;
-        expect(boolean, isBool);
+        expect(boolean, isA<bool>());
       });
     });
     group('Values -', () {
@@ -35,7 +35,7 @@ void using_boolean() {
          * for details: http://goo.gl/gBUIZ )
          */
         var boolean = 0;
-        expect(_____, isNotBool);
+        expect(_____, isNot(isA<bool>()));
       });
       test('1 not true', () {
         /*
@@ -44,7 +44,7 @@ void using_boolean() {
          * also not the case in Dart.
          */
         var boolean = 1;
-        expect(_____, isNotBool);
+        expect(_____, isNot(isA<bool>()));
       });
       test('negated', () {
         /*
