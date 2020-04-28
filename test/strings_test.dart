@@ -107,8 +107,12 @@ _____
          * now just concentrate on the fact that a string and 
          * non-string added together throws an error.
          */
-        var broken = () => 'two ' + 3;
-        expect(_____, throwsArgumentError);
+        
+        
+        var broken;
+        // Uncomment line below!
+        // broken = () => 'two ' + 3;
+        expect(broken, throwsArgumentError);
       });
     });
     group('Interpolation -', () {
@@ -180,7 +184,10 @@ _____
         // We'll cover that in more detail later. For now only be
         // concerned that anything after the => below causes the
         // error to be thrown.
-        var broken = () => str[0] = 'h'; 
+        
+        var broken;
+        // Uncomment line below!
+        // broken = () => str[0] = 'h'; 
         expect(_____, throwsNoSuchMethodError);
       });
     });
