@@ -26,11 +26,17 @@ in the pub-cache and more difficult location for editing properly.
 Usage
 -----
 
-First you must make sure you have, at the least, the Dart VM
+First you must make sure you have the Dart SDK
 installed on your computer and working. If you're unsure about
 this process please see the 
 [Dart download](http://www.dartlang.org/downloads.html).
-From the command line use the dartVM to run the file:
+
+To run all tests, run the command below:
+
+    pub run test
+
+
+From the command line use the dartVM to run each test file:
 
     dart bin/dart_koans.dart
 
