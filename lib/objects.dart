@@ -1,3 +1,5 @@
+import "package:test/test.dart";
+
 void using_objects() {
   group('Objects -', () {
     group('Everything -', () {

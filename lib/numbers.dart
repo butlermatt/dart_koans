@@ -1,3 +1,5 @@
+import "package:test/test.dart";
+
 start_here() {
   group('Introduction -', () {
     test('First steps', () {

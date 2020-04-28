@@ -1,3 +1,5 @@
+import "package:test/test.dart";
+
 void using_boolean() {
   group('Boolean -', () {
     group('Declaring -', () {

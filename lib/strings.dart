@@ -1,3 +1,5 @@
+import "package:test/test.dart";
+
 void using_strings() {
   group('Strings -', () {
     group('Declaring -', () {
