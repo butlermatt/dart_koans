@@ -64,8 +64,11 @@ void main() {
          * can catch errors, as well some special things we
          * can do with NoSuchMethod.
          */
+
         var boolean = true;
-        var broken = () => boolean.causeError();
+        var broken;
+        // Uncomment line below!
+        // broken = () => boolean.causeError();
         expect(_____, throwsNoSuchMethodError);
       });
     });
