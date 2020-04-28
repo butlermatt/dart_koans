@@ -1,5 +1,3 @@
-part of dart2_koans;
-
 start_here() {
   group('Introduction -', () {
     test('First steps', () {

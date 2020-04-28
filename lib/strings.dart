@@ -1,5 +1,3 @@
-part of dart2_koans;
-
 void using_strings() {
   group('Strings -', () {
     group('Declaring -', () {
